@@ -40,7 +40,7 @@ class DateStrings {
   }
 
   static String getYearMonthDay(long timeInMillis) {
-    return getYearMonthDay(timeInMillis, Locale.getDefault());
+    return getYearMonthDay(timeInMillis, new Locale("ar"));
   }
 
   /**
@@ -61,7 +61,7 @@ class DateStrings {
   }
 
   static String getMonthDay(long timeInMillis) {
-    return getMonthDay(timeInMillis, Locale.getDefault());
+    return getMonthDay(timeInMillis,  new Locale("ar"));
   }
 
   /**
@@ -82,7 +82,7 @@ class DateStrings {
   }
 
   static String getMonthDayOfWeekDay(long timeInMillis) {
-    return getMonthDayOfWeekDay(timeInMillis, Locale.getDefault());
+    return getMonthDayOfWeekDay(timeInMillis,  new Locale("ar"));
   }
 
   static String getMonthDayOfWeekDay(long timeInMillis, Locale locale) {
@@ -93,7 +93,7 @@ class DateStrings {
   }
 
   static String getYearMonthDayOfWeekDay(long timeInMillis) {
-    return getYearMonthDayOfWeekDay(timeInMillis, Locale.getDefault());
+    return getYearMonthDayOfWeekDay(timeInMillis,  new Locale("ar"));
   }
 
   static String getYearMonthDayOfWeekDay(long timeInMillis, Locale locale) {
@@ -176,13 +176,13 @@ class DateStrings {
     } else if (startCalendar.get(Calendar.YEAR) == endCalendar.get(Calendar.YEAR)) {
       if (startCalendar.get(Calendar.YEAR) == currentCalendar.get(Calendar.YEAR)) {
         return Pair.create(
-            getMonthDay(start, Locale.getDefault()), getMonthDay(end, Locale.getDefault()));
+            getMonthDay(start,  new Locale("ar")), getMonthDay(end,  new Locale("ar")));
       } else {
         return Pair.create(
-            getMonthDay(start, Locale.getDefault()), getYearMonthDay(end, Locale.getDefault()));
+            getMonthDay(start,  new Locale("ar")), getYearMonthDay(end,  new Locale("ar")));
       }
     }
     return Pair.create(
-        getYearMonthDay(start, Locale.getDefault()), getYearMonthDay(end, Locale.getDefault()));
+        getYearMonthDay(start,  new Locale("ar")), getYearMonthDay(end,  new Locale("ar")));
   }
 }
